@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PCManager_WPF_NetCore6"
         mc:Ignorable="d"
+        Loaded="onWindowLoaded"
         Title="MainWindow" Height="450" Width="800" Background="Black" Foreground="#aaa">
     <Grid>
         <DockPanel LastChildFill="True">
@@ -25,9 +26,9 @@
 
             <StackPanel>
                 <Label FontSize="20" Foreground="White">Notes for you:</Label>
-                <StackPanel x:Name="NotesForManager" Orientation="Vertical" Margin="20,0,0,0">
-                    <TextBlock x:Name="sampleNote1" FontSize="17">Disk cleanup <TextBlock Foreground="LightGreen">Successful</TextBlock> at 1 AM</TextBlock>
-                    <TextBlock x:Name="sampleNote2" FontSize="17">Book library was mapped to Drive <TextBlock Foreground="LightCyan">X:</TextBlock></TextBlock>
+                <StackPanel x:Name="NotesForManagerViewContainer" Orientation="Vertical" Margin="20,0,0,0">
+                    <TextBlock x:Name="sampleNote1" FontSize="17">Disk cleanup <Bold Foreground="LightGreen">Successful</Bold> at 1 AM</TextBlock>
+                    <TextBlock x:Name="sampleNote2" FontSize="17">Book library was mapped to Drive <Bold Foreground="LightCyan">X:</Bold></TextBlock>
                 </StackPanel>
             </StackPanel>
 
