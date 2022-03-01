@@ -1,0 +1,3 @@
+﻿desc: auto map my USB
+type: pyscript
+triggers: drive.plugged.in, drive.removed, system.startup
