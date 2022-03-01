@@ -9,6 +9,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="AutoTasks\MapDrives\script.py" />
+    <None Remove="AutoTasks\MapDrives\task.yaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="AutoTasks\MapDrives\script.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="AutoTasks\MapDrives\task.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <Page Update="AutomationTaskListWindow.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
