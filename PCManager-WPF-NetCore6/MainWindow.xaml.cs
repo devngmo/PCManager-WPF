@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PCManager_WPF_NetCore6.AppLayer.Adapters;
+using PCManager_WPF_NetCore6.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,15 @@ namespace PCManager_WPF_NetCore6
     /// </summary>
     public partial class MainWindow : Window
     {
+        NoteForManagerAdapter nfmAdapter = new NoteForManagerAdapter();
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        void onWindowLoaded(object sender, RoutedEventArgs e)
+        {
+            nfmAdapter.LoadTo(NotesForManagerViewContainer);
         }
 
         void showAutomationTaskList(object sender, RoutedEventArgs e)
